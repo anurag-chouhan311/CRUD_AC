@@ -22,8 +22,8 @@ const AddUser = () => {
       phone,
     };
 
-    dispatch(addUser(obj));
     setId((prev) => prev + 1);
+    dispatch(addUser(obj));
     setFirstName("");
     setLastName("");
     setEmail("");

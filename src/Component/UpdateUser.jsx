@@ -15,13 +15,13 @@ const UpdateUser = () => {
 
   const handleUpdatedData = () => {
     let obj = {
-      id: data.id,
+      id:data.id,
       firstName: updateFname,
       lastName: updateLname,
       email: updateEmail,
       phone: updatePhone,
     };
-    dispatch(updateUser1(obj));
+    dispatch(updateUser1(obj,data.index));
     alert("Data Updated...");
     navigate("/");
   };

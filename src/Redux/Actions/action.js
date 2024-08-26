@@ -16,15 +16,17 @@ export const deleteUser = (id) => {
     payload: id,
   };
 };
-export const updateUser = (item) => {
+export const updateUser = (item,index) => {
   return {
     type: "update",
-    payload: item,
+    item: item,
+    index:index
   };
 };
-export const updateUser1 = (item) => {
+export const updateUser1 = (item,index) => {
   return {
     type: "update1",
     payload: item,
+    index:index
   };
 };

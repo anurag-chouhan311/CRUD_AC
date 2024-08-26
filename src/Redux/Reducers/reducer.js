@@ -55,12 +55,12 @@ export const reducer = (state = storeData, action) => {
     case "update":
       return {
         ...state,
-        updateData: { ...action.payload },
+        updateData: { ...action.item,index:action.index },
       };
     case "update1":
       // console.log("payload", action.payload.id-1);
       let dup = [...state.globalData];
-      dup[action.payload.id - 1] = action.payload;
+      dup[action.index] = action.payload;
       return {
         ...state,
         globalData: [...dup],

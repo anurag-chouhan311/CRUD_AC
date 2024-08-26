@@ -24,9 +24,9 @@ const ContactView = () => {
   const handleDelete = (index) => {
     dispatch(deleteUser(index));
   };
-  const handleUpdate = (item) => {
+  const handleUpdate = (item,index) => {
     navigate("/updateuser");
-    dispatch(updateUser(item));
+    dispatch(updateUser(item,index));
   };
 
   useEffect(() => {
@@ -70,7 +70,7 @@ const ContactView = () => {
             <p>Phone - {item.phone}</p>
             <div className="operations">
               <FaRegEye onClick={() => handleViewUser(item)} />
-              <FaPenToSquare onClick={() => handleUpdate(item)} />
+              <FaPenToSquare onClick={() => handleUpdate(item,index)} />
               <MdOutlinePersonRemove onClick={() => handleDelete(index)} />
             </div>
           </div>
